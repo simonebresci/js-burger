@@ -1,2 +1,60 @@
-// Test javascript
-alert('javascript caricato');
+// Dichiarazione variabili
+var burgerName =  document.getElementById('burger-name');
+var btnCalculate = document.getElementById('btnCalculate');
+var listaIngradienti = document.getElementsByClassName('checkboxes-container')[0].getElementsByTagName('input');
+var finalPrice = document.getElementById('finalPrice');
+var discountCode = document.getElementById('discount-code');
+var sconto = 0;
+var nCheck = 0;
+var prezzo = 0;
+
+
+// Bottone calcola
+btnCalculate.addEventListener('click', function() {
+  // Inizializza variabili
+  error=false;
+  prezzo = 0;
+  nCheck=0;
+
+  // Controlla dati immessi
+  // Campo nome burger non vuoto
+  if (burgerName.value === ''){
+    error = true;
+    alert('Compila il campo burger name');
+  }
+
+  // Calcola prezzo
+  if (!error){
+    for (var i=0;i<listaIngradienti.length;i++){
+      if (listaIngradienti[i].checked){
+        prezzo += parseInt(listaIngradienti[i].value);
+        nCheck++;
+      }
+    }
+
+    // Almeno due checkbox spuntate
+    if (nCheck < 2){
+      error = true;
+      alert('Inserisci almeno due ingredienti');
+    }
+
+    // Applica sconto
+    if (!error){
+      console.log(discountCode.value);
+      if (discountCode !== ''){
+        if (discountCode.value === 'sconto20'){
+          sconto = 20;
+          alert('Codice valido: applico sconto');
+        }
+
+      }
+
+      // Calcola prezzo finale
+      prezzo = prezzo - (prezzo / 100 * sconto);
+
+      // Scrivi valore su pagina html
+      finalPrice.innerText = prezzo;
+    }
+  }
+
+});

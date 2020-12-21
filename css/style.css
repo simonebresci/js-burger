@@ -1,4 +1,8 @@
 /* CSS di prova*/
+*{
+  font-size: 26px;
+}
+
 header{
   background-color: yellow;
   color: black;
