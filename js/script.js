@@ -70,7 +70,7 @@ btnCalculate.addEventListener('click', function() {
       prezzo = prezzo - (prezzo / 100 * sconto);
 
       // Scrivi valore su pagina html
-      finalPrice.innerText = prezzo;
+      finalPrice.innerText = '$ ' + prezzo;
     }
   }
 
