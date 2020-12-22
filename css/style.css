@@ -63,7 +63,7 @@ header img{
 }
 
 main .content{
-  height: 600px;
+  height: calc(100vh - 240px); //Sottrai altezza header e footer
   font-size: 18px;
   background-color: white;
 }
@@ -77,7 +77,7 @@ main .content{
 }
 
 main .content .checkboxes-title{
-  font-weight: 18px;
+  font-size: 18px;
 }
 
 main .content .checkboxes-container [class*='group'] {
@@ -89,8 +89,62 @@ main .content .checkboxes-container [class*='group'] label {
 }
 
 main .content .checkboxes-container{
+  margin-top: 15px;
   margin-bottom: 30px;
 }
+
+
+/* Checkboxes custom */
+/*
+-immagine prima
+-testo "add" dopo
+-sfondo colorato
+-spunta personalizzata
+-label testo
+-cliccabile ovunque (immagine, testo e casella)
+*/
+
+.checkbox-custom1 img{
+  width: 32px;
+}
+
+.checkbox-custom1{
+  line-height: 32px;
+  vertical-align: middle;
+}
+
+.checkbox-custom1::after{
+  display: inline-block;
+  content: '';
+  color: rgba(0,0,0,0);
+  width: 16px;
+  height: 16px;
+  background-color: green;
+  border: 1px solid green;
+}
+
+.checkbox-custom1 input::after{
+  margin-left: 45px;
+  content: "add";
+}
+
+/* non funziona ancora */
+(.checkbox-custom1 [type="checkbox"]:checked) + (.checkbox-custom1::before){
+  display: inline-block;
+  content: "Checked";
+  color: rgba(0,0,0,1);
+  width: 32px;
+  height: 32px;
+  background-color: red;
+  border: 1px solid red;
+
+}
+
+
+
+
+/* /Checkboxes custom */
+
 
 main .content .discount-container{
   margin-bottom: 30px;
