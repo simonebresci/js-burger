@@ -7,47 +7,54 @@
   </head>
   <body>
 
-    <main>
+    <div class="container-sito">
+
       <header>
-      Create Your Burger
+        <div class="content flex-rowYCenter">
+          <div> Create Your Burger </div>
+        </div>
       </header>
 
-      <div class="content">
-        <input id="burger-name" type="text" name="burger" value="" placeholder="Name Your Burger">
-        <div>Ingredients </div>
-        <div class="checkboxes-container">
-          <label for="list[]">Cheese</label>
-          <input type="checkbox" name="list[]" value="1">
-          <label for="list[]">Tomato</label>
-          <input type="checkbox" name="list[]" value="2">
-          <label for="list[]">Egg</label>
-          <input type="checkbox" name="list[]" value="3">
-          <label for="list[]">Lettuce</label>
-          <input type="checkbox" name="list[]" value="4">
-          <label for="list[]">Mustard</label>
-          <input type="checkbox" name="list[]" value="5">
-          <label for="list[]">Ketchup</label>
-          <input type="checkbox" name="list[]" value="6">
+      <main>
+        <div class="content">
+          <input id="burger-name" type="text" name="burger" value="" placeholder="Name Your Burger">
+          <div>Ingredients </div>
+          <div class="checkboxes-container">
+            <label for="list[]">Cheese</label>
+            <input type="checkbox" name="list[]" value="1">
+            <label for="list[]">Tomato</label>
+            <input type="checkbox" name="list[]" value="2">
+            <label for="list[]">Egg</label>
+            <input type="checkbox" name="list[]" value="3">
+            <label for="list[]">Lettuce</label>
+            <input type="checkbox" name="list[]" value="4">
+            <label for="list[]">Mustard</label>
+            <input type="checkbox" name="list[]" value="5">
+            <label for="list[]">Ketchup</label>
+            <input type="checkbox" name="list[]" value="6">
+          </div>
+
+          <div class="discount-container">
+            <span>Discount Coupon</span> <input id="discount-code" type="text" name="discount" value="" placeholder="Discount code here.">
+          </div>
+
+          <div class="button-container">
+            <button id="btnCalculate" type="button" name="btnCalculate">calculate</button>
+          </div>
+
+
         </div>
 
-        <div class="discount-container">
-          <span>Discount Coupon</span> <input id="discount-code" type="text" name="discount" value="" placeholder="Discount code here.">
-        </div>
+      </main>
 
-        <div class="button-container">
-          <button id="btnCalculate" type="button" name="btnCalculate">calculate</button>
-        </div>
-
-
-      </div>
       <footer>
-        <span>Your Price</span>
-        <span id="finalPrice">$$$$$$$$$</span>
+        <div class="content flex-rowYCenter flex-justify-space-between ">
+          <div>Your Price</div>
+          <div id="finalPrice">$$$$$$$$$</div>
+        </div>
       </footer>
-
-
-    </main>
-
+      
+    </div>
     <script src="./js/script.js" charset="utf-8"></script>
   </body>
 </html>

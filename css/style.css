@@ -1,20 +1,61 @@
 /* CSS di prova*/
 *{
-  font-size: 26px;
+  /* font-size: 26px; */
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
 }
 
-header{
-  background-color: yellow;
-  color: black;
-  height: 100px;
+/* UTILITIES */
+.flex-rowYCenter{
+  display: flex;
+  align-items: center;
+}
+
+.flex-justify-space-between{
+  justify-content: space-between;
+}
+
+/* /UTILITIES */
+
+
+.container-sito{
+  width: 80%;
+  margin: 0 auto;
 }
 
 .content{
-  height: 800px;
+  padding: 15px;
+  /* height: 600px; */
+}
+
+
+
+header{
+  background-color: rgb(253,187,64);
+  height: 140px;
+  font-weight: bold;
+  font-size: 30px;
+}
+header .content{
+  height: 100%;
+}
+
+
+main .content{
+  height: 600px;
+  font-size: 18px;
 }
 
 footer{
-  background-color: lightcoral;
-  color: white;
   height: 100px;
+  background-color: rgb(255,51,89);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+
+}
+
+footer .content{
+  height: 100%;
 }
