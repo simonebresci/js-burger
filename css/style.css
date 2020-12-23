@@ -113,39 +113,40 @@ main .content .checkboxes-container{
   vertical-align: middle;
 }
 
-.checkbox-custom1::after{
+.checkbox-custom1 span::before{
   display: inline-block;
-  content: '';
+  content: 'x';
   color: rgba(0,0,0,0);
   width: 16px;
   height: 16px;
+  line-height: 16px;
   background-color: green;
-  border: 1px solid green;
+  border-radius: 5px;
+  padding: 2px;
+  text-align: center;
+  margin-right: 5px;
+
 }
 
-.checkbox-custom1 input::after{
-  margin-left: 45px;
-  content: "add";
+.checkbox-custom1 [type="checkbox"]{
+  visibility: hidden;
 }
 
-/* non funziona ancora */
-(.checkbox-custom1 [type="checkbox"]:checked) + (.checkbox-custom1::before){
-  display: inline-block;
-  content: "Checked";
-  color: rgba(0,0,0,1);
-  width: 32px;
-  height: 32px;
-  background-color: red;
+
+.checkbox-custom1 [type="checkbox"]:checked + label span::before{
+  color: rgba(255,255,255,1);
+  content: 'X';
+  line-height: 16px;
+}
+
+/* .checkbox-custom1 [type="checkbox"]:checked + label .my-icon{
   border: 1px solid red;
-
-}
-
+  padding: 80px;
+} */
 
 
 
 /* /Checkboxes custom */
-
-
 main .content .discount-container{
   margin-bottom: 30px;
 }

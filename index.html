@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
   <head>
+    <!-- Link fontAwesome v4.7 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
     <title>Burger</title>
     <link rel="stylesheet" href="./css/style.css">
@@ -24,11 +26,17 @@
             <div class="checkboxes-title">Ingredients </div>
             <div class="checkboxes-container flex-row">
               <div class="group-1 flex-column">
+
                 <div class="checkbox-custom1">
-                  <img src="./img/icone/cheese.svg" alt="Cheese">
+                  <label for="cheese"><img src="./img/icone/cheese.svg" alt="Cheese"></label>
                   <label for="cheese">Cheese</label>
                   <input id="cheese" type="checkbox" name="ingrediente" value="1">
+                  <label for="cheese"><span>add</span></label>
+                  <!-- <label for="cheese"><i class="my-icon fa fa-check" aria-hidden="true">dee</i></label> -->
                 </div>
+
+
+
                 <div class="checkbox-custom1">
                   <label for="list[]">Tomato</label>
                   <input type="checkbox" name="list[]" value="2">
