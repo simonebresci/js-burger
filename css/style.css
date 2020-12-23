@@ -105,22 +105,31 @@ main .content .checkboxes-container{
 */
 
 .checkbox-custom1 img{
-  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.checkbox-custom1 label{
+  height: 32px;
+  vertical-align: middle;
 }
 
 .checkbox-custom1{
   line-height: 32px;
   vertical-align: middle;
+  margin-bottom: 15px;
 }
 
 .checkbox-custom1 span::before{
   display: inline-block;
-  content: 'x';
+  font-family: fontAwesome;
+  content: '\f00c';
   color: rgba(0,0,0,0);
   width: 16px;
   height: 16px;
   line-height: 16px;
-  background-color: green;
+  background-color: rgb(231,51,89);
   border-radius: 5px;
   padding: 2px;
   text-align: center;
@@ -130,19 +139,22 @@ main .content .checkboxes-container{
 
 .checkbox-custom1 [type="checkbox"]{
   visibility: hidden;
+  padding-right: 5px;
 }
 
 
 .checkbox-custom1 [type="checkbox"]:checked + label span::before{
-  color: rgba(255,255,255,1);
-  content: 'X';
+  color: rgba(255,255,255,1);  /* Rendi visibile icona */
+  /* content: 'X'; */
+  color: black;
   line-height: 16px;
 }
 
-/* .checkbox-custom1 [type="checkbox"]:checked + label .my-icon{
-  border: 1px solid red;
-  padding: 80px;
-} */
+
+.checkbox-custom1 .desc{
+  display: inline-block;
+  min-width: 60px;
+}
 
 
 
@@ -171,7 +183,7 @@ main .content .button-container{
 #btnCalculate{
   background-color: rgb(253,187,64);
   color: black;
-  font-weight: black;
+  font-weight: bold;
   border: 0px;
   border-radius: 5px;
   padding: 20px;
